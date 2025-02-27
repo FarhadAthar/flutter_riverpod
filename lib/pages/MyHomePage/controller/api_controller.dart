@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_application/apis/api_service.dart';
 import 'package:flutter_riverpod_application/pages/MyHomePage/model/api_states.dart';
 
+final apiDataStateProvider = NotifierProvider<ApiStateNotifier, ApiDataStates>(ApiStateNotifier.new);
+
 class ApiStateNotifier extends Notifier<ApiDataStates> {
   final JokeApiService _jokeApiService = JokeApiService();
 
